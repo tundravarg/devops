@@ -5,6 +5,7 @@ RUN apk update && apk upgrade
 RUN apk add openjdk17
 RUN apk add maven
 RUN apk add gradle
+RUN apk add git
 
 # Needed for Jenkins
 RUN apk add ttf-dejavu
