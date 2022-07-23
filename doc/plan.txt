@@ -1,0 +1,6 @@
+BACKLOG
+
+-	Jenkins
+-	Nexus
+-	SonarQube
+-	Test Java application
