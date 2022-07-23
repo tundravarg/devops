@@ -3,13 +3,13 @@ DAY 2022-07-23
 +	Jenkins
     +   Docker with empty Linux
     +   Jenkins
--	Test Java application
++	Test Java application
 
 
 
 BACKLOG
 
 +	Jenkins
--	Test Java application
++	Test Java application
 -	Nexus
 -	SonarQube
