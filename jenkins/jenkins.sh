@@ -10,6 +10,7 @@ function help {
     echo "  help           - print this help"
     echo "  build          - build image"
     echo "  start          - run container"
+    echo "  starti         - run container in interative mode"
     echo "  stop [<id>]    - stop single or specified container"
     echo "  stop-all       - stop all containers"
     echo "  restart [<id>] - restart or run single or specified container"
@@ -22,12 +23,14 @@ function build {
 }
 
 function start {
+    local MODE=$( [[ $1 ]] && echo $1 || echo '-d' )
+
     # -d | -it - Detached | Interactive mode
     # -p <local>:<remote> - Bind port
     # -v $(pwd)/<local>:<remote> - Bind path
     # -e <name>=<value> - Set env
     docker run \
-        -d \
+        $MODE \
         -p 88:8080 \
         -v $(pwd)/share:/root/share \
         -v $(pwd)/data:/root/data \
@@ -93,6 +96,9 @@ case $1 in
     ;;
     "start")
         start ${*:2}
+    ;;
+     "starti")
+        start -it ${*:2}
     ;;
     "stop")
         stop ${*:2}
