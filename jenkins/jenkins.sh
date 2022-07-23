@@ -27,7 +27,10 @@ function start {
     # -v $(pwd)/<local>:<remote> - Bind path
     # -e <name>=<value> - Set env
     docker run \
-        -it \
+        -d \
+        -p 88:8080 \
+        -v $(pwd)/share:/root/share \
+        -v $(pwd)/data:/root/data \
         $DOCKER_IMAGE
 }
 

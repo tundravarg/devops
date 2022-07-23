@@ -1,16 +1,15 @@
 DAY 2022-07-23
 
-%	Jenkins
++	Jenkins
     +   Docker with empty Linux
-    -   Jenkins
-    -   Postgres
-    -   DB backup scripts
+    +   Jenkins
+-	Test Java application
 
 
 
 BACKLOG
 
-%	Jenkins
++	Jenkins
+-	Test Java application
 -	Nexus
 -	SonarQube
--	Test Java application
